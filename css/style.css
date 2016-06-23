@@ -696,7 +696,7 @@ body {
 
 body #page {
     max-width: 1170px;
-    background-color: #fff;
+    /*background-color: #fff;*/
     margin-left: auto;
     margin-right: auto;
 }
@@ -869,6 +869,145 @@ pre .deletion {
 .gutter {
   width: 50px;
 }
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700);
+.enterLink,
+.homeContent {
+    margin: auto;
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.text--line {
+    font-size: 15.5em;
+}
+
+svg {
+    display: block;
+    position: relative;
+    width: 100%;
+    /*height: 500px;*/
+    margin: auto;
+    text-align: center;
+
+}
+
+.bg-scroll{
+    background: url("../images/gridme.png") repeat 0 0;
+
+    -webkit-animation: bg-scrolling-reverse 2s infinite;
+    -moz-animation: bg-scrolling-reverse 2s infinite;
+    -o-animation: bg-scrolling-reverse 2s infinite;
+    animation: bg-scrolling-reverse 2s infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    -o-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 7% 28%;
+    stroke-width: .5px;
+    font-family: 'Roboto';
+    font-weight: 100;
+    -webkit-animation: stroke-offset 15s infinite alternate ease-in-out;
+    animation: stroke-offset 15s infinite alternate forwards;
+}
+
+.text-copy:nth-child(1) {
+    stroke: #FD5039;
+    stroke-dashoffset: 0%;
+}
+
+.text-copy:nth-child(2) {
+    stroke: #FDE181;
+    stroke-dashoffset: 7%;
+}
+
+.text-copy:nth-child(3) {
+    stroke: #E7D84B;
+    stroke-dashoffset: 14%;
+}
+
+.text-copy:nth-child(4) {
+    stroke: #EFEAC5;
+    stroke-dashoffset: 21%;
+}
+
+.text-copy:nth-child(5) {
+    stroke: #1B8798;
+    stroke-dashoffset: 28%;
+}
+
+@-webkit-keyframes stroke-offset {
+    0% {
+        stroke-dashoffset: 0%;
+        stroke-dasharray: 0 87.5%;
+    }
+}
+
+@keyframes stroke-offset {
+    0% {
+        stroke-dashoffset: 100%;
+        stroke-dasharray: 0% 100%;
+    }
+    100% {
+        /*stroke: #F03838;*/
+    }
+}
+
+
+/* Animations */
+
+@-webkit-keyframes bg-scrolling-reverse {
+    100% {
+        background-position: 50px 50px;
+    }
+}
+
+@-moz-keyframes bg-scrolling-reverse {
+    100% {
+        background-position: 50px 50px;
+    }
+}
+
+@-o-keyframes bg-scrolling-reverse {
+    100% {
+        background-position: 50px 50px;
+    }
+}
+
+@keyframes bg-scrolling-reverse {
+    100% {
+        background-position: 50px 50px;
+    }
+}
+
+@-webkit-keyframes bg-scrolling {
+    0% {
+        background-position: 50px 50px;
+    }
+}
+
+@-moz-keyframes bg-scrolling {
+    0% {
+        background-position: 50px 50px;
+    }
+}
+
+@-o-keyframes bg-scrolling {
+    0% {
+        background-position: 50px 50px;
+    }
+}
+
+@keyframes bg-scrolling {
+    0% {
+        background-position: 50px 50px;
+    }
+}
+
 .pull-left {
     float: left;
 }
@@ -1411,7 +1550,11 @@ pre .deletion {
         padding: 6.1rem 0;
     }
 }
-
+@media (max-width: 900px) {
+       .text--line {
+        font-size: 10.5em;
+    }
+}
 @media (max-width: 768px) {
     #primary {
         padding-top: 20px;
@@ -1433,6 +1576,9 @@ pre .deletion {
     }
     .archiveMenu {
         margin: -1em;
+    }
+    .text--line {
+        font-size: 5.5em;
     }
 }
 
