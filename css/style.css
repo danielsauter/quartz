@@ -896,6 +896,7 @@ svg {
     position: relative;
     width: 100%;
     height: 100%;
+    margin: 5em 0em;
 }
 
 .bg-scroll{
@@ -1593,6 +1594,9 @@ svg {
     }
     .bg-scroll{
         background-size: 10px;
+    }
+    .animated-logo{
+        /*margin: 0em 0em;*/
     }
 }
 
