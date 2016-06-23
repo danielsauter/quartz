@@ -423,7 +423,7 @@ th {
   padding: 0;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700);
 @import 'https://fonts.googleapis.com/css?family=Cairo|Playfair+Display:400,400i,700,700i,900,900i';
 /** {
     word-wrap: break-word;
@@ -704,7 +704,7 @@ body #page {
 
 body {
     
-    font-family: "Montserrat", "Lato", "Helvetica Neue", "Arial", serif;
+    font-family: "Lato", "Helvetica Neue", "Arial", serif;
     font-size: 1.6rem;
     color: #424242;
     line-height: 1.8;
@@ -877,21 +877,20 @@ pre .deletion {
     float: right;
 }
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display);
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 .site-branding {
     position: relative;
     text-align: center;
     margin-bottom: 2rem;
     font-size: 1.4rem;
-    font-family: "Playfair Display", arial, sans-serif;
+    font-family: "Roboto", arial, sans-serif;
     letter-spacing: .1em;
 }
 
 .site-branding .site-title {
     margin: 0;
     font-size: 3.4rem;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto', serif;
 }
 
 .site-branding .site-logo {
@@ -913,20 +912,22 @@ pre .deletion {
 
 .site-branding a {
     display: inline-block;
-    color: #fff !important;
-    font-weight: bolder;
-    background-color: #F03838;
-    line-height: 3rem;
-    height: 3.8rem;
-    padding: 0 1rem;
-    -webkit-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
-    font-family: 'Playfair Display', serif;
+    color: #000 !important;
+    font-size: 1.2em;
+    font-weight: 300;
+    background-color: #fff;
+    line-height: 2rem;
+    height: 5rem;
+    padding: 1.2rem 1rem;
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+    font-family: 'Roboto', serif !important;
 }
 
 .site-branding a:hover {
     color: #fff !important;
-    padding: 0 1.5rem;
+    padding:  1.2rem 1.5rem;
+    background-color: #F03838;
 }
 
 .main-navigation {
@@ -1164,6 +1165,7 @@ pre .deletion {
 .article-content img {
     width: 100%;
     height: auto;
+    padding: 2em;
 }
 
 .link-url {

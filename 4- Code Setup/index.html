@@ -3,10 +3,57 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Software Setup | Quartz</title>
+  <title>Software Setup | QUARTZ</title>
   <meta name="author" content="Jaskirat Randhawa">
   
-  <meta name="description" content="Manual Extrusion of material">
+  <meta name="description" content="Requirements
+McNeel Rhino
+Serial Port JSON Server
+TinyG - Hardware Fiddle
+
+
+Setup the TinyG board
+Power up and connect the TinyG board using via USB to your computer.
+Run the Serial Port JSON Server and leave it running in the background. 
+Open your browser and go to chilipeppr.com/tinyg 
+Go to the Serial Port JSON Server fiddle in bottom right and refresh to see the TinyG listed.
+Select and connect to the board.
+Change the following settings:
+Change Latch Velocity to 50
+X and Y Travel/rev = 36.54
+X and Y Microsteps = 8
+Z Travel/rev =1.25
+Z microsteps = 4
+
+
+
+
+Workflow
+Generate the geometery
+The extrusion path is first created in Rhino. All the measurememts are in millimeters unless otherwise specified.
+Run the Python Script Editor in Rhino. Use command: EditPythonScript in Rhino Console.
+Run the following script to generate a G-Code file. The code has been taken and modified from timcastelijn/gcode-generator.Gist 
+Copy the contents of the saved file and use Chilipeppr to perform the extrusion.
+
+
+Run the Extrusion
+This project used browser based Chilipeppr workspace to control the machine. 
+Open your browser and go to chilipeppr.com/tinyg 
+Go to the Serial Port JSON Server fiddle in bottom right and refresh to see the TinyG listed.
+Select and connect to the board.
+Go to ‘Workspace TinyG’ fiddle on top left and click the load GCode button. Paste the contents under ‘Open Gcode From Clipboard’.
+Insert the glass rod in the extruder and zero the machine to the correct point for extrusion
+Power on the air-compressor to start the vacuum and ignite the propane torch at low flame. Leave it on for a few seconds till the glass is in semi-liquid state.
+Press play button in Chilipeppr GCode fiddle to initiate the movement of the machine.
+
+
+
+Useful Links
+
+TinyG Documentation
+Shapeoko TinyG Setup
+Chilipeppr Documentation
+TinyG G-Code Generator">
   
   
 
@@ -15,14 +62,14 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
   <meta property="og:title" content="Software Setup"/>
-  <meta property="og:site_name" content="Quartz"/>
+  <meta property="og:site_name" content="QUARTZ"/>
 
   
     <meta property="og:image" content="undefined"/>
   
 
   <link href="/favicon.ico" rel="icon">
-  <link rel="alternate" href="/atom.xml" title="Quartz" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="QUARTZ" type="application/atom+xml">
   <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
 </head>
 
@@ -33,7 +80,7 @@
 
     <header id="header" class="inner"><div class="site-branding">
   <h1 class="site-title">
-    <a href="/">Quartz</a>
+    <a href="/">QUARTZ</a>
   </h1>
   <p class="site-description"></p>
 </div>
@@ -73,7 +120,56 @@
   <div class="article-content">
     <div class="entry">
       
-        <p>Manual Extrusion of material<br><a id="more"></a></p>
+        <h1 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h1><ul>
+<li><a href="https://github.com/johnlauer/serial-port-json-server" target="_blank" rel="external">McNeel Rhino</a></li>
+<li><a href="https://github.com/johnlauer/serial-port-json-server" target="_blank" rel="external">Serial Port JSON Server</a></li>
+<li><a href="https://github.com/synthetos/TinyG/wiki/Chilipeppr" target="_blank" rel="external">TinyG - Hardware Fiddle</a></li>
+</ul>
+<hr>
+<h1 id="Setup-the-TinyG-board"><a href="#Setup-the-TinyG-board" class="headerlink" title="Setup the TinyG board"></a>Setup the TinyG board</h1><ul>
+<li>Power up and connect the TinyG board using via USB to your computer.</li>
+<li>Run the Serial Port JSON Server and leave it running in the background. </li>
+<li>Open your browser and go to <a href="http://chilipeppr.com/tinyg" target="_blank" rel="external">chilipeppr.com/tinyg</a> </li>
+<li>Go to the Serial Port JSON Server fiddle in bottom right and refresh to see the TinyG listed.</li>
+<li>Select and connect to the board.</li>
+<li><strong>Change the following settings:</strong><ul>
+<li>Change Latch Velocity to 50</li>
+<li>X and Y Travel/rev = 36.54</li>
+<li>X and Y Microsteps = 8</li>
+<li>Z Travel/rev =1.25</li>
+<li>Z microsteps = 4</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="Workflow"><a href="#Workflow" class="headerlink" title="Workflow"></a>Workflow</h1><ul>
+<li><h4 id="Generate-the-geometery"><a href="#Generate-the-geometery" class="headerlink" title="Generate the geometery"></a>Generate the geometery</h4><ul>
+<li>The extrusion path is first created in Rhino. All the measurememts are in millimeters unless otherwise specified.</li>
+<li>Run the Python Script Editor in Rhino. Use command: <strong>EditPythonScript</strong> in Rhino Console.</li>
+<li>Run the following script to generate a G-Code file. The code has been taken and modified from <a href="https://github.com/timcastelijn/gcode-generator" target="_blank" rel="external">timcastelijn/gcode-generator</a>.<br>Gist </li>
+<li>Copy the contents of the saved file and use Chilipeppr to perform the extrusion.<br><img src="/images/rhino.jpg" alt="Rhino"></li>
+</ul>
+</li>
+<li><h4 id="Run-the-Extrusion"><a href="#Run-the-Extrusion" class="headerlink" title="Run the Extrusion"></a>Run the Extrusion</h4><ul>
+<li>This project used browser based Chilipeppr workspace to control the machine. </li>
+<li>Open your browser and go to <a href="http://chilipeppr.com/tinyg" target="_blank" rel="external">chilipeppr.com/tinyg</a> </li>
+<li>Go to the Serial Port JSON Server fiddle in bottom right and refresh to see the TinyG listed.</li>
+<li>Select and connect to the board.</li>
+<li>Go to ‘Workspace TinyG’ fiddle on top left and click the load GCode button. Paste the contents under ‘Open Gcode From Clipboard’.</li>
+<li>Insert the glass rod in the extruder and zero the machine to the correct point for extrusion</li>
+<li>Power on the air-compressor to start the vacuum and ignite the propane torch at low flame. Leave it on for a few seconds till the glass is in semi-liquid state.</li>
+<li>Press play button in Chilipeppr GCode fiddle to initiate the movement of the machine.<br><img src="/images/chilipeppr.jpg" alt="chilipeppr"></li>
+</ul>
+</li>
+</ul>
+<p><strong>Useful Links</strong></p>
+<ul>
+<li><a href="https://github.com/synthetos/TinyG" target="_blank" rel="external">TinyG Documentation</a></li>
+<li><a href="https://github.com/synthetos/TinyG/wiki/TinyG-Shapeoko-Setup" target="_blank" rel="external">Shapeoko TinyG Setup</a></li>
+<li><a href="https://github.com/synthetos/TinyG/wiki/Chilipeppr" target="_blank" rel="external">Chilipeppr Documentation</a></li>
+<li><a href="https://github.com/timcastelijn/gcode-generator" target="_blank" rel="external">TinyG G-Code Generator</a><a id="more"></a>
+</li>
+</ul>
 <!-- ![Manual Extrusion of Glass](images/image2.jpg) -->
 <!-- 
 ## Quick Start

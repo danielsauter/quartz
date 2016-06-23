@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Quartz</title>
+  <title>QUARTZ</title>
   <meta name="author" content="Jaskirat Randhawa">
   
   
@@ -13,14 +13,14 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
   
-  <meta property="og:site_name" content="Quartz"/>
+  <meta property="og:site_name" content="QUARTZ"/>
 
   
     <meta property="og:image" content="undefined"/>
   
 
   <link href="/favicon.ico" rel="icon">
-  <link rel="alternate" href="/atom.xml" title="Quartz" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="QUARTZ" type="application/atom+xml">
   <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
 </head>
 
@@ -31,7 +31,7 @@
 
     <header id="header" class="inner"><div class="site-branding">
   <h1 class="site-title">
-    <a href="/">Quartz</a>
+    <a href="/">QUARTZ</a>
   </h1>
   <p class="site-description"></p>
 </div>
@@ -62,6 +62,18 @@
             
               <h3 class="archive-title"><a href="/1- Intro/"><span>Introduction</span></a><time class="time" datetime="2016-01-12T05:24:22.905Z">
               <a href="/1- Intro/">01/12/2016</a>
+            </time></h3>
+            
+          </header>
+        </div>
+      </article>
+    
+      <article class="post archive">
+        <div class="archive-post">
+          <header>
+            
+              <h3 class="archive-title"><a href="/2- Gallery/"><span>Gallery</span></a><time class="time" datetime="2016-06-17T20:06:21.567Z">
+              <a href="/2- Gallery/">06/17/2016</a>
             </time></h3>
             
           </header>
@@ -128,18 +140,6 @@
         </div>
       </article>
     
-      <article class="post archive">
-        <div class="archive-post">
-          <header>
-            
-              <h3 class="archive-title"><a href="/7- Gallery/"><span>Gallery</span></a><time class="time" datetime="2016-06-17T20:06:21.567Z">
-              <a href="/7- Gallery/">06/17/2016</a>
-            </time></h3>
-            
-          </header>
-        </div>
-      </article>
-    
     <nav class="pagination">
   
   
@@ -148,8 +148,9 @@
 
 </div>
 
-<!-- 
-  <article class="post article">
+
+<!--  -->
+  <!-- <article class="post article">
 
   
   
@@ -173,7 +174,7 @@
   <div class="article-content">
     <div class="entry">
       
-        <p>Manual Extrusion of material<br>
+        <p>Tiny G Setup<br>link to tinyG settings<br>
       
     </div>
     <footer class="article-footer">
@@ -186,9 +187,9 @@
   </div>
 </article>
 
-
-
-  <article class="post article">
+ -->
+<!--  -->
+  <!-- <article class="post article">
 
   
   
@@ -264,19 +265,19 @@
   </div>
 </article>
 
-
-
-  <article class="post article">
+ -->
+<!--  -->
+  <!-- <article class="post article">
 
   
   
-    <h3 class="article-title"><a href="/7- Gallery/"><span>Gallery</span></a></h3>
+    <h3 class="article-title"><a href="/2- Gallery/"><span>Gallery</span></a></h3>
   
 
 
   <div class="article-top-meta">
     <span class="posted-on">
-      <a href="/7- Gallery/" rel="bookmark">
+      <a href="/2- Gallery/" rel="bookmark">
         <time class="entry-date published" datetime="2016-06-17T20:06:21.567Z">
           06/17/2016
         </time>
@@ -303,9 +304,9 @@
   </div>
 </article>
 
-
-
-  <article class="post article">
+ -->
+<!--  -->
+  <!-- <article class="post article">
 
   
   
@@ -461,9 +462,9 @@
   </div>
 </article>
 
-
-
-  <article class="post article">
+ -->
+<!--  -->
+  <!-- <article class="post article">
 
   
   
@@ -487,7 +488,54 @@
   <div class="article-content">
     <div class="entry">
       
-        <p>Manual Extrusion of material<br>
+        <h1 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h1><ul>
+<li><a href="https://github.com/johnlauer/serial-port-json-server">McNeel Rhino</a></li>
+<li><a href="https://github.com/johnlauer/serial-port-json-server">Serial Port JSON Server</a></li>
+<li><a href="https://github.com/synthetos/TinyG/wiki/Chilipeppr">TinyG - Hardware Fiddle</a></li>
+</ul>
+<hr>
+<h1 id="Setup-the-TinyG-board"><a href="#Setup-the-TinyG-board" class="headerlink" title="Setup the TinyG board"></a>Setup the TinyG board</h1><ul>
+<li>Power up and connect the TinyG board using via USB to your computer.</li>
+<li>Run the Serial Port JSON Server and leave it running in the background. </li>
+<li>Open your browser and go to <a href="http://chilipeppr.com/tinyg">chilipeppr.com/tinyg</a> </li>
+<li>Go to the Serial Port JSON Server fiddle in bottom right and refresh to see the TinyG listed.</li>
+<li>Select and connect to the board.</li>
+<li><strong>Change the following settings:</strong><ul>
+<li>Change Latch Velocity to 50</li>
+<li>X and Y Travel/rev = 36.54</li>
+<li>X and Y Microsteps = 8</li>
+<li>Z Travel/rev =1.25</li>
+<li>Z microsteps = 4</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="Workflow"><a href="#Workflow" class="headerlink" title="Workflow"></a>Workflow</h1><ul>
+<li><h4 id="Generate-the-geometery"><a href="#Generate-the-geometery" class="headerlink" title="Generate the geometery"></a>Generate the geometery</h4><ul>
+<li>The extrusion path is first created in Rhino. All the measurememts are in millimeters unless otherwise specified.</li>
+<li>Run the Python Script Editor in Rhino. Use command: <strong>EditPythonScript</strong> in Rhino Console.</li>
+<li>Run the following script to generate a G-Code file. The code has been taken and modified from <a href="https://github.com/timcastelijn/gcode-generator">timcastelijn/gcode-generator</a>.<br>Gist </li>
+<li>Copy the contents of the saved file and use Chilipeppr to perform the extrusion.<br><img src="/images/rhino.jpg" alt="Rhino"></li>
+</ul>
+</li>
+<li><h4 id="Run-the-Extrusion"><a href="#Run-the-Extrusion" class="headerlink" title="Run the Extrusion"></a>Run the Extrusion</h4><ul>
+<li>This project used browser based Chilipeppr workspace to control the machine. </li>
+<li>Open your browser and go to <a href="http://chilipeppr.com/tinyg">chilipeppr.com/tinyg</a> </li>
+<li>Go to the Serial Port JSON Server fiddle in bottom right and refresh to see the TinyG listed.</li>
+<li>Select and connect to the board.</li>
+<li>Go to ‘Workspace TinyG’ fiddle on top left and click the load GCode button. Paste the contents under ‘Open Gcode From Clipboard’.</li>
+<li>Insert the glass rod in the extruder and zero the machine to the correct point for extrusion</li>
+<li>Power on the air-compressor to start the vacuum and ignite the propane torch at low flame. Leave it on for a few seconds till the glass is in semi-liquid state.</li>
+<li>Press play button in Chilipeppr GCode fiddle to initiate the movement of the machine.<br><img src="/images/chilipeppr.jpg" alt="chilipeppr"></li>
+</ul>
+</li>
+</ul>
+<p><strong>Useful Links</strong></p>
+<ul>
+<li><a href="https://github.com/synthetos/TinyG">TinyG Documentation</a></li>
+<li><a href="https://github.com/synthetos/TinyG/wiki/TinyG-Shapeoko-Setup">Shapeoko TinyG Setup</a></li>
+<li><a href="https://github.com/synthetos/TinyG/wiki/Chilipeppr">Chilipeppr Documentation</a></li>
+<li><a href="https://github.com/timcastelijn/gcode-generator">TinyG G-Code Generator</a>
       
     </div>
     <footer class="article-footer">
@@ -500,9 +548,9 @@
   </div>
 </article>
 
-
-
-  <article class="post article">
+ -->
+<!--  -->
+  <!-- <article class="post article">
 
   
   
@@ -571,9 +619,9 @@
   </div>
 </article>
 
-
-
-  <article class="post article">
+ -->
+<!--  -->
+  <!-- <article class="post article">
 
   
   
@@ -611,10 +659,10 @@
   </div>
 </article>
 
+ -->
+<!--  -->
 
-
-
-<nav class="pagination">
+<!-- <nav class="pagination">
   
   
 </nav> -->
