@@ -685,7 +685,7 @@ iframe {
 #primary {
     /*max-width: 770px;*/
     width: 100%;
-    padding: 80px 10px 10px;
+    padding: 60px 10px 10px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -889,29 +889,33 @@ svg {
     /*height: 500px;*/
     margin: auto;
     text-align: center;
-
 }
 
-.animated-logo{
+.tagline {
+    word-spacing: .3em;
+    font-style: italic;
+}
+
+.animated-logo {
     position: relative;
     width: 100%;
     height: 100%;
-    margin: 5em 0em;
+    margin: 10em 0em;
 }
 
-.bg-scroll{
+.bg-scroll {
     background: url("../images/gridme.png") repeat 0 0;
     background-size: 50px;
-
-    -webkit-animation: bg-scrolling-reverse 2s infinite;
-    -moz-animation: bg-scrolling-reverse 2s infinite;
-    -o-animation: bg-scrolling-reverse 2s infinite;
-    animation: bg-scrolling-reverse 2s infinite;
-    -webkit-animation-timing-function: linear;
-    -moz-animation-timing-function: linear;
-    -o-animation-timing-function: linear;
-    animation-timing-function: linear;
+    -webkit-animation: bg-scrolling-reverse 10s infinite;
+    -moz-animation: bg-scrolling-reverse 10s infinite;
+    -o-animation: bg-scrolling-reverse 10s infinite;
+    animation: bg-scrolling-reverse 10s infinite;
+    -webkit-animation-timing-function: cubic-bezier(0.42,0,0.58,1);
+    -moz-animation-timing-function: cubic-bezier(0.42,0,0.58,1);
+    -o-animation-timing-function: cubic-bezier(0.42,0,0.58,1);
+    animation-timing-function: cubic-bezier(0.42,0,0.58,1);
 }
+
 .text-copy {
     fill: none;
     stroke: white;
@@ -921,8 +925,8 @@ svg {
     font-weight: 100;
     /*-webkit-animation: stroke-offset 15s infinite alternate ease-in-out;
     animation: stroke-offset 15s infinite alternate forwards;*/
-    -webkit-animation: stroke-offset 15s  ease-in-out;
-    animation: stroke-offset 15s  forwards;
+    -webkit-animation: stroke-offset 15s ease-in-out;
+    animation: stroke-offset 15s forwards;
 }
 
 .text-copy:nth-child(1) {
@@ -971,53 +975,64 @@ svg {
 /* Animations */
 
 @-webkit-keyframes bg-scrolling-reverse {
+    25% {
+        background-position: 150px 150px;
+    }
+    50% {
+        background-position: 300px 0px;
+    }
+    75% {
+        background-position: 150px -150px;
+    }
     100% {
-        background-position: 50px 50px;
+        background-position: 0px 0px;
     }
 }
 
 @-moz-keyframes bg-scrolling-reverse {
+    25% {
+        background-position: 150px 150px;
+    }
+    50% {
+        background-position: 300px 0px;
+    }
+    75% {
+        background-position: 150px -150px;
+    }
     100% {
-        background-position: 50px 50px;
+        background-position: 0px 0px;
     }
 }
 
 @-o-keyframes bg-scrolling-reverse {
+    25% {
+        background-position: 150px 150px;
+    }
+    50% {
+        background-position: 300px 0px;
+    }
+    75% {
+        background-position: 150px -150px;
+    }
     100% {
-        background-position: 50px 50px;
+        background-position: 0px 0px;
     }
 }
 
 @keyframes bg-scrolling-reverse {
+    25% {
+        background-position: 150px 150px;
+    }
+    50% {
+        background-position: 300px 0px;
+    }
+    75% {
+        background-position: 150px -150px;
+    }
     100% {
-        background-position: 50px 50px;
+        background-position: 0px 0px;
     }
 }
-
-@-webkit-keyframes bg-scrolling {
-    0% {
-        background-position: 50px 50px;
-    }
-}
-
-@-moz-keyframes bg-scrolling {
-    0% {
-        background-position: 50px 50px;
-    }
-}
-
-@-o-keyframes bg-scrolling {
-    0% {
-        background-position: 50px 50px;
-    }
-}
-
-@keyframes bg-scrolling {
-    0% {
-        background-position: 50px 50px;
-    }
-}
-
 .pull-left {
     float: left;
 }
@@ -1026,7 +1041,6 @@ svg {
     float: right;
 }
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display);
-
 .site-branding {
     position: relative;
     text-align: center;
@@ -1075,7 +1089,7 @@ svg {
 
 .site-branding a:hover {
     color: #fff !important;
-    padding:  1.2rem 1.5rem;
+    padding: 1.2rem 1.5rem;
     background-color: #F03838;
 }
 
@@ -1099,19 +1113,19 @@ svg {
 .main-navigation ul a {
     display: block;
     color: #F03838;
-    font-size: 1.6rem;
+    font-size: 1.35rem;
     line-height: 2rem;
     padding: 0 1rem;
-    font-weight: 600;
+    font-weight: 400;
+    letter-spacing: .13em;
 }
-
 
 .site-footer {
     position: relative;
     text-align: center;
     padding-top: 1rem;
     color: #9e9e9e;
-    opacity: 0.3;
+    opacity: 0.35;
 }
 
 .site-footer .site-info {
@@ -1126,7 +1140,7 @@ svg {
 
 .archive-post {
     text-align: left;
-    margin: 4em auto;
+    margin: 3em auto;
 }
 
 .archive-post .archive-title {
@@ -1316,7 +1330,7 @@ svg {
 .article-content img {
     width: 100%;
     height: auto;
-    padding: 2em;
+    padding: 2em 0em;
 }
 
 .link-url {
