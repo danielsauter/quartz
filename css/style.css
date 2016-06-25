@@ -906,10 +906,10 @@ svg {
 .bg-scroll {
     background: url("../images/gridme.png") repeat 0 0;
     background-size: 50px;
-    -webkit-animation: bg-scrolling-reverse 10s infinite;
-    -moz-animation: bg-scrolling-reverse 10s infinite;
-    -o-animation: bg-scrolling-reverse 10s infinite;
-    animation: bg-scrolling-reverse 10s infinite;
+    -webkit-animation: bg-scrolling-reverse 20s infinite;
+    -moz-animation: bg-scrolling-reverse 20s infinite;
+    -o-animation: bg-scrolling-reverse 20s infinite;
+    animation: bg-scrolling-reverse 20s infinite;
     -webkit-animation-timing-function: cubic-bezier(0.42,0,0.58,1);
     -moz-animation-timing-function: cubic-bezier(0.42,0,0.58,1);
     -o-animation-timing-function: cubic-bezier(0.42,0,0.58,1);
