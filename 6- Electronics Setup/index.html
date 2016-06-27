@@ -3,14 +3,10 @@
 <head>
   <meta charset="utf-8">
   
-  <title>QUARTZ</title>
+  <title>Electronics Setup | QUARTZ</title>
   <meta name="author" content="Parsons School of Design">
   
-  <meta name="description" content="CNCX Carve Documents and G-Code control
-Folders
-
-GCODE : Testing files
-Models : CAD Files for XCarve. Built from 500mmX500mm model. Tolerances may var">
+  <meta name="description" content="The electronics are fairly easy to setup. The X-Carve may come bundled with Grbl Shield that drives the motors. You’ll need to drive 4 motors : X,Y,Z ">
   
   
 
@@ -18,7 +14,7 @@ Models : CAD Files for XCarve. Built from 500mmX500mm model. Tolerances may var"
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-  
+  <meta property="og:title" content="Electronics Setup"/>
   <meta property="og:site_name" content="QUARTZ"/>
 
   
@@ -57,19 +53,19 @@ Models : CAD Files for XCarve. Built from 500mmX500mm model. Tolerances may var"
     
     <article id="content" class="site-content">
       <main id="main" class="site-main posts-loop" role="main">
-        <article class="page article">
+        <article class="post article">
     
     
   
-    <h3 class="article-title"><span></span></h3>
+    <h3 class="article-title"><span>Electronics Setup</span></h3>
   
 
     <div class="article-top-meta">
       <span class="posted-on">
-        <a href="/README.html" rel="bookmark">
-          <time class="entry-date published" datetime="2016-06-20T19:18:52.840Z">
+        <a href="/6- Electronics Setup/" rel="bookmark">
+          <time class="entry-date published" datetime="2016-06-02T04:00:00.000Z">
              
-            06/20/2016
+            06/02/2016
             
           </time>
         </a>
@@ -86,23 +82,17 @@ Models : CAD Files for XCarve. Built from 500mmX500mm model. Tolerances may var"
       
         
         
-          <h1 id="CNC"><a href="#CNC" class="headerlink" title="CNC"></a>CNC</h1><p>X Carve Documents and G-Code control</p>
-<p>Folders</p>
-<ul>
-<li>GCODE : Testing files</li>
-<li>Models : CAD Files for XCarve. Built from 500mmX500mm model. Tolerances may vary.</li>
-<li>Scripts : Python &amp; Grasshopper files</li>
-<li>UniversalGCodeSender : To manually send GCode to XCarve</li>
+          <p>The electronics are fairly easy to setup. The X-Carve may come bundled with Grbl Shield that drives the motors. You’ll need to drive 4 motors : X,Y,Z axis stepper motors and A axis, a rotational axis for the extruder motor. TinyG board is a good alternative that is compatible with Chilipeppr. It has 4 motor drivers on-board.</p>
+<p><img src="/images/tinyg2.jpg" alt="Tinyg"></p>
+<h4 id="Stepper-Motor-Wiring"><a href="#Stepper-Motor-Wiring" class="headerlink" title="Stepper Motor Wiring"></a>Stepper Motor Wiring</h4><ul>
+<li>Simply connect the stepper motors to the respective axis on the controller board. More details <a href="https://github.com/synthetos/TinyG/wiki/Connecting-TinyG#wire-your-motors" target="_blank" rel="external">here</a>.</li>
+<li>Connect the limit switches.</li>
+<li>You can run the wiring to the extruder through <a href="https://www.inventables.com/technologies/drag-chain" target="_blank" rel="external">drag chain</a> already present on the board. </li>
 </ul>
-<p>Next tests:</p>
-<ul>
-<li>Faulty Y Limit Switch</li>
-<li>Movement in 3D</li>
-<li>Make 3D Printer mount**</li>
-<li>Extruder to GRBL Connections*</li>
+<h4 id="Reference-Links"><a href="#Reference-Links" class="headerlink" title="Reference Links"></a>Reference Links</h4><ul>
+<li><a href="https://github.com/synthetos/TinyG/wiki/Connecting-TinyG" target="_blank" rel="external">TinyG Wiring</a></li>
+<li><a href="http://x-carve-instructions.inventables.com/step10/" target="_blank" rel="external">X Carve Wiring</a></li>
 </ul>
-<p>Base plate &amp; temperature controller</p>
-<p>*Difficulty/Time Investment</p>
 
         
 
@@ -111,6 +101,10 @@ Models : CAD Files for XCarve. Built from 500mmX500mm model. Tolerances may var"
     <footer class="article-footer">
       <div class="navPosts">
         
+          <div class="navPrevButton"><a href="/5- Code Setup/">&#10096; Previous: Software Setup</a></div>
+        
+        
+          <div class="navNextButton"><a href="/7- Assembly/">Next: Hardware Assembly &#10097;</a>
         
       </div>
         <div class="article-meta pull-left">
