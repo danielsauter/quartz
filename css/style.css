@@ -1349,7 +1349,9 @@ svg {
     margin-right: .5rem;
 }
 
-.article-content {}
+.article-content {
+    padding-top: 3em;
+}
 
 .article-content img {
     width: 100%;
