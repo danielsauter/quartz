@@ -1201,7 +1201,7 @@ svg {
     font-weight: 100;
 }
 
-.site-content{
+.site-content {
     padding: 0em 0em 3em 0em;
 }
 
@@ -1471,16 +1471,70 @@ svg {
     color: #e41111;
 }
 
-.embed-container video{
-    border-left: none;
-    transition-property:  border-left;
-    transition-duration: .25s;
-    transition-timing-function: ease;
-}
-.embed-container video:hover{
-    border-left: 3px solid #F03838;
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
 }
 
+.embed-container iframe,
+.embed-container video,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.embed-container video{
+    
+    /*-webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */*/
+    /*filter: grayscale(100%);*/
+}
+
+.embed-container video {
+    border-left: none;
+    cursor: pointer;
+    transition-property: border;
+    transition-duration: .1s;
+    transition-timing-function: ease-in-out;
+    
+}
+
+.embed-container video:hover {
+    /*border: 2px solid #FFFFFF;*/
+}
+
+.playButton{
+    background-color: antiquewhite;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255,0);
+    top: 50%;
+    left: 50%;
+    margin-top: -25px;
+    margin-left: -25px;
+    position: absolute;
+    text-align: center;
+    z-index: 100;
+    pointer-events:none;
+    border-radius: 50%;
+    
+
+}
+.fa{
+    display: table-cell; vertical-align: middle;
+    height: 50px;
+    margin: auto;
+    position: relative;
+    width: 50px;
+    font-size: 50px;
+    color: #F03838;
+
+}
 .icon-meta {
     display: -webkit-box;
     display: -ms-flexbox;

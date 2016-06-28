@@ -7,7 +7,9 @@
   <title>Hardware Assembly | QUARTZ</title>
   <meta name="author" content="Parsons School of Design">
   
-  <meta name="description" content=".embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-contain">
+  <meta name="description" content="StepsAll the parts (not tools) mentioned below can be found here in parts list
+
+Preparing the Extruder MountNote: The CAD design may vary for differen">
   
   
 
@@ -21,7 +23,7 @@
   
     <meta property="og:image" content="undefined"/>
   
-
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
   <link href="/favicon.ico" rel="icon">
   <link rel="alternate" href="/atom.xml" title="QUARTZ" type="application/atom+xml">
   <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
@@ -84,7 +86,8 @@
         
         
           <a id="more"></a>
-<p><style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class="embed-container"><iframe src="https://player.vimeo.com/video/172000091" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div></p>
+<div class="embed-container"><br><iframe src="https://player.vimeo.com/video/172000091" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe><br></div>
+
 <hr>
 <h1 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h1><p>All the parts (not tools) mentioned below can be found <a href="">here in parts list</a></p>
 <ul>
@@ -177,21 +180,49 @@
    -->
 </p>
 
+<div class="playButton" style="display:none"> <i class="fa fa-play" aria-hidden="true"></i>
+</div>
+
 <script   src="https://code.jquery.com/jquery-3.0.0.min.js"   integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="   crossorigin="anonymous"></script>
 
 <script type="text/javascript">
-$(".playVideo").click(function(){ 
-  
-  if(this.paused){
-    this.play();  
-  }
-  else{
-    this.pause();  
-  }
+
+$( document ).ready(function() {
+  // Add playbutton on each video
+  $( ".playButton" ).insertAfter( $( "video" ) );
+  // Make it display block only if parent = embed container
+  $(".embed-container").children( '.playButton' ).css({'display': "block",});
+  // Apply filter
+  $('video').css({
+   '-webkit-filter': 'grayscale(100%)',
+        'filter': 'grayscale(100%)',
+  });
+
+  // Play/pause actions
+  $(".playVideo").click(function(){ 
+    if(this.paused){
+      this.play();
+      $( this ).parent().children( '.playButton' ).css({
+        'display': "none",
+       });
+       $( this ).css({
+        '-webkit-filter': 'grayscale(0%)',
+        'filter': 'grayscale(0%)',
+       });       
+    }
+    else{
+      this.pause();  
+       $( this ).parent().children( '.playButton' ).css({
+        'display': "block",
+       });
+       $( this ).css({
+        '-webkit-filter': 'grayscale(100%)',
+        'filter': 'grayscale(100%)',
+       });  
+    }
+  });
 });
-  // document.getElementById('playVid').onclick = function (){
-  //     document.getElementById('video').play();
-  // };
+
 
 </script></footer>
     
