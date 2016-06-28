@@ -106,16 +106,21 @@ Causes of failures
 </li>
 <li><p><strong> Glass suction </strong><br>If the vacuum hose is placed too close the semi-liquid glass, it may get sucked in. Maintaining an appropriate distance and angle is crucial to correct way of evacuating hot-air.</p>
 <div class="embed-container"><br>  <video loop class="embed-responsive-item playVideo"><br>      <source src="/files/loop5.mp4" type="video/mp4"><br>  </video><br></div>
+
+
+
 </li>
-<li><p>Angle of heating C0004</p>
-</li>
+</ul>
+<p>————- In progress———–</p>
+<ul>
+<li>Angle of heating C0004</li>
 </ul>
 <h4 id="Propane-Torch-Test"><a href="#Propane-Torch-Test" class="headerlink" title="Propane Torch Test"></a>Propane Torch Test</h4><p>Arc Generation<br>Vertical Extrusion Test</p>
 <h4 id="Circle-Generation"><a href="#Circle-Generation" class="headerlink" title="Circle Generation"></a>Circle Generation</h4><p>2D extrusion parallel to the ground<br>Look for dip in geometry<br>Consistency in the extrusion<br>Dragging of semi-cooled geometry away from the intended path</p>
 <h4 id="Handheld-Butane-Torch-Test"><a href="#Handheld-Butane-Torch-Test" class="headerlink" title="Handheld Butane Torch Test"></a>Handheld Butane Torch Test</h4><p>GB-2001 Torch</p>
 <h4 id="Manual-Extrusion-by-Hand"><a href="#Manual-Extrusion-by-Hand" class="headerlink" title="Manual Extrusion by Hand"></a>Manual Extrusion by Hand</h4><div class="embed-container"><br>    <iframe src="https://player.vimeo.com/video/143218193" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe><br></div>
 
-<p><img src="/images/image2.jpg" alt="Manual Extrusion of Glass"></p>
+<p><br></p>
 
         
 
@@ -165,8 +170,45 @@ Causes of failures
 <script   src="https://code.jquery.com/jquery-3.0.0.min.js"   integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="   crossorigin="anonymous"></script>
 
 <script type="text/javascript">
+var mobile;
+if ($(window).width() < 960) {
+  mobile = true;
+}
+else {
+   mobile = false;
+}
+
 
 $( document ).ready(function() {
+  
+  // ----------------IMAGE Effects----------------------
+  // Set all images to greyscale
+  if (!mobile) {
+    $('.entry').find('img').css({
+      'transition' : '-webkit-filter .2s ease-in-out, filter .2s ease-in-out',
+      '-webkit-filter': 'grayscale(100%)',
+      'filter': 'grayscale(100%)',
+    });
+  }
+
+  if (!mobile) {
+    // Hover effect
+    $('.entry').find('img').hover(function(){
+        $(this).css({
+
+         '-webkit-filter': 'grayscale(0%)',
+              'filter': 'grayscale(0%)',
+        });
+      }, function(){
+        $(this).css({
+         '-webkit-filter': 'grayscale(100%)',
+              'filter': 'grayscale(100%)',
+        });
+    });
+  }
+
+
+  // ----------------VIDEO Effects----------------------
   // Add playbutton on each video
   $( ".playButton" ).insertAfter( $( "video" ) );
   // Make it display block only if parent = embed container

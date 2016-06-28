@@ -245,8 +245,45 @@ TinyG G-Code Generator">
 <script   src="https://code.jquery.com/jquery-3.0.0.min.js"   integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="   crossorigin="anonymous"></script>
 
 <script type="text/javascript">
+var mobile;
+if ($(window).width() < 960) {
+  mobile = true;
+}
+else {
+   mobile = false;
+}
+
 
 $( document ).ready(function() {
+  
+  // ----------------IMAGE Effects----------------------
+  // Set all images to greyscale
+  if (!mobile) {
+    $('.entry').find('img').css({
+      'transition' : '-webkit-filter .2s ease-in-out, filter .2s ease-in-out',
+      '-webkit-filter': 'grayscale(100%)',
+      'filter': 'grayscale(100%)',
+    });
+  }
+
+  if (!mobile) {
+    // Hover effect
+    $('.entry').find('img').hover(function(){
+        $(this).css({
+
+         '-webkit-filter': 'grayscale(0%)',
+              'filter': 'grayscale(0%)',
+        });
+      }, function(){
+        $(this).css({
+         '-webkit-filter': 'grayscale(100%)',
+              'filter': 'grayscale(100%)',
+        });
+    });
+  }
+
+
+  // ----------------VIDEO Effects----------------------
   // Add playbutton on each video
   $( ".playButton" ).insertAfter( $( "video" ) );
   // Make it display block only if parent = embed container
