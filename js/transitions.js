@@ -11,7 +11,7 @@ $('a').click(function(event) {
     if ($(this).attr('target') != '_blank') {
         event.preventDefault();
         newLocation = this.href;
-        $('body').fadeOut(100, function() {
+        $('body').fadeOut(250, function() {
             window.location = newLocation;
         });
     }
@@ -19,7 +19,7 @@ $('a').click(function(event) {
 
 
 $(document).ready(function() {
-    $('body').fadeIn(100);
+    $('body').fadeIn(250);
     //-----------------Home Page Redirect-----------------
     if (location.pathname == "/") {
         setTimeout(function() {
