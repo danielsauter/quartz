@@ -56,6 +56,57 @@ $(document).ready(function() {
         });
     }
 
+    //-----------------VIMEO Effects----------------------
+    var iframe = $('iframe');
+    $(iframe).each(function(index, value) {
+        var source = $(this).attr('src');
+        if (source.indexOf("player.vimeo.com") >= 0) {
+            $(this).attr('src', $(this).attr('src') + '?loop=1&api=1&player_id=player_' + index);
+            $(this).attr('id', 'player_' + index);
+        }
+
+        var player = $f(this);
+        console.log($(player).get(0).element.id);
+        // When the player is ready, add listeners for pause, finish, and playProgress
+        player.addEvent('ready', function() {
+            var playerID = $(player).get(0).element.id;
+            $('#' + playerID).css({
+                '-webkit-filter': 'grayscale(100%)',
+                'filter': 'grayscale(100%)',
+            });
+            player.addEvent('pause', onPause);
+            player.addEvent('finish', onFinish);
+            player.addEvent('playProgress', onPlayProgress);
+        });
+
+        // Call the API when a button is pressed
+        $('button').bind('click', function() {
+            player.api($(this).text().toLowerCase());
+        });
+
+        function onPause() {
+            // console.log('pause');
+            var playerID = $(player).get(0).element.id;
+            $('#' + playerID).css({
+                '-webkit-filter': 'grayscale(100%)',
+                'filter': 'grayscale(100%)',
+            });
+        }
+
+        function onFinish() {
+
+        }
+
+        function onPlayProgress(data) {
+            // console.log('play');
+            var playerID = $(player).get(0).element.id;
+            $('#' + playerID).css({
+                '-webkit-filter': 'grayscale(0%)',
+                'filter': 'grayscale(0%)',
+            });
+        }
+
+    });
 
     // ----------------VIDEO Effects----------------------
     // Add playbutton on each video
