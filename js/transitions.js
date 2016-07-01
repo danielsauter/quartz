@@ -17,9 +17,36 @@ $('a').click(function(event) {
     }
 });
 
+function cssStyle() {
+    // Center the opening title
+    if (location.pathname == "/") {
+        if (!mobile) {
+            $('#primary').css({
+                'position': 'absolute',
+                'top': '50%',
+                'transform': 'translate(-50%,-50%)',
+                'left': '50%',
+
+            });
+        } else {
+            $('#primary').css({
+                'position': 'absolute',
+                'top': '50%',
+                'transform': 'translate(-50%,-65%)',
+                'left': '50%',
+            });
+        }
+    }
+}
 
 $(document).ready(function() {
     $('body').fadeIn(250);
+    cssStyle();
+    // CSS STYLING
+    $(window).resize(function() {
+        cssStyle();
+    });
+
     //-----------------Home Page Redirect-----------------
     if (location.pathname == "/") {
         setTimeout(function() {
