@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700);
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
 /**
@@ -869,7 +871,7 @@ pre .deletion {
 .gutter {
   width: 50px;
 }
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700);
+
 .enterLink,
 .homeContent {
     margin: auto;
@@ -1040,7 +1042,6 @@ svg {
 .pull-right {
     float: right;
 }
-@import url(https://fonts.googleapis.com/css?family=Playfair+Display);
 .site-branding {
     position: relative;
     text-align: center;
