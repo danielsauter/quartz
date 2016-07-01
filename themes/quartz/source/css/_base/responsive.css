@@ -1,0 +1,42 @@
+@media (min-width: 768px) {
+    .article {
+        padding-top: 6.1rem ;
+    }
+}
+@media (max-width: 900px) {
+       .text--line {
+        font-size: 10.5em;
+    }
+}
+@media (max-width: 768px) {
+    #primary {
+        padding-top: 20px;
+    }
+    .article {
+        padding: 2.5rem 0 !important;
+    }
+    .archive-title a span {
+        font-size: inherit;
+    }
+    .archive-post time {
+        font-size: .4em;
+    }
+    .archive-post {
+        margin: 2em auto;
+    }
+    .article-title {
+        font-size: 2.8rem;
+    }
+    .archiveMenu {
+        margin: -1em;
+    }
+    .text--line {
+        font-size: 5.5em;
+    }
+    .bg-scroll{
+        background-size: 10px;
+    }
+    .animated-logo{
+        /*margin: 0em 0em;*/
+    }
+}

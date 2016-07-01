@@ -1,0 +1,164 @@
+
+.enterLink,
+.homeContent {
+    margin: auto;
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.text--line {
+    font-size: 15.5em;
+}
+
+svg {
+    display: block;
+    position: relative;
+    width: 100%;
+    /*height: 500px;*/
+    margin: auto;
+    text-align: center;
+}
+
+.tagline {
+    word-spacing: .3em;
+    font-style: italic;
+}
+
+.animated-logo {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 10em 0em;
+}
+
+.bg-scroll {
+    background: url("../images/gridme.png") repeat 0 0;
+    background-size: 50px;
+    -webkit-animation: bg-scrolling-reverse 20s infinite;
+    -moz-animation: bg-scrolling-reverse 20s infinite;
+    -o-animation: bg-scrolling-reverse 20s infinite;
+    animation: bg-scrolling-reverse 20s infinite;
+    -webkit-animation-timing-function: cubic-bezier(0.42,0,0.58,1);
+    -moz-animation-timing-function: cubic-bezier(0.42,0,0.58,1);
+    -o-animation-timing-function: cubic-bezier(0.42,0,0.58,1);
+    animation-timing-function: cubic-bezier(0.42,0,0.58,1);
+}
+
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 7% 28%;
+    stroke-width: .5px;
+    font-family: 'Roboto';
+    font-weight: 100;
+    /*-webkit-animation: stroke-offset 15s infinite alternate ease-in-out;
+    animation: stroke-offset 15s infinite alternate forwards;*/
+    -webkit-animation: stroke-offset 15s ease-in-out;
+    animation: stroke-offset 15s forwards;
+}
+
+.text-copy:nth-child(1) {
+    stroke: #FD5039;
+    stroke-dashoffset: 0%;
+}
+
+.text-copy:nth-child(2) {
+    stroke: #FDE181;
+    stroke-dashoffset: 7%;
+}
+
+.text-copy:nth-child(3) {
+    stroke: #E7D84B;
+    stroke-dashoffset: 14%;
+}
+
+.text-copy:nth-child(4) {
+    stroke: #EFEAC5;
+    stroke-dashoffset: 21%;
+}
+
+.text-copy:nth-child(5) {
+    stroke: #1B8798;
+    stroke-dashoffset: 28%;
+}
+
+@-webkit-keyframes stroke-offset {
+    0% {
+        stroke-dashoffset: 0%;
+        stroke-dasharray: 0 87.5%;
+    }
+}
+
+@keyframes stroke-offset {
+    0% {
+        stroke-dashoffset: 100%;
+        stroke-dasharray: 0% 100%;
+    }
+    100% {
+        /*stroke: #F03838;*/
+    }
+}
+
+
+/* Animations */
+
+@-webkit-keyframes bg-scrolling-reverse {
+    25% {
+        background-position: 150px 150px;
+    }
+    50% {
+        background-position: 300px 0px;
+    }
+    75% {
+        background-position: 150px -150px;
+    }
+    100% {
+        background-position: 0px 0px;
+    }
+}
+
+@-moz-keyframes bg-scrolling-reverse {
+    25% {
+        background-position: 150px 150px;
+    }
+    50% {
+        background-position: 300px 0px;
+    }
+    75% {
+        background-position: 150px -150px;
+    }
+    100% {
+        background-position: 0px 0px;
+    }
+}
+
+@-o-keyframes bg-scrolling-reverse {
+    25% {
+        background-position: 150px 150px;
+    }
+    50% {
+        background-position: 300px 0px;
+    }
+    75% {
+        background-position: 150px -150px;
+    }
+    100% {
+        background-position: 0px 0px;
+    }
+}
+
+@keyframes bg-scrolling-reverse {
+    25% {
+        background-position: 150px 150px;
+    }
+    50% {
+        background-position: 300px 0px;
+    }
+    75% {
+        background-position: 150px -150px;
+    }
+    100% {
+        background-position: 0px 0px;
+    }
+}

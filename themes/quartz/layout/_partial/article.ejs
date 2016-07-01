@@ -1,0 +1,87 @@
+<article class="<%= item.layout %> article">
+  <% if (page.source!="index.md") {%>  
+    <%- partial('post/title') %>
+    <div class="article-top-meta">
+      <span class="posted-on">
+        <a href="<%- config.root %><%- item.path %>" rel="bookmark">
+          <time class="entry-date published" datetime="<%= item.date.toDate().toISOString() %>">
+            <% if (page.title!="Contact") {%> 
+            <%= item.date.format(config.date_format) %>
+            <%}%>
+          </time>
+        </a>
+      </span>
+    </div>
+  <%}%>
+
+  <% if (item.photos && item.photos.length){ %>
+    <%- partial('post/gallery') %>
+  <% } %>
+
+  <div class="article-content">
+  <% if (page.source=="index.md") {%> 
+    <a href="/archives">
+      <div class="animated-logo">
+        <svg width="100%" height="300px" >
+          <symbol id="s-text">
+              <text text-anchor="middle" x="50%" y="80%" class="text--line">
+                  <%= config.title %>
+              </text>
+             <!--  <text text-anchor="middle" x="50%" y="68%" class="text--line2">
+                  Stroke
+              </text> -->
+          </symbol>
+          <g class="g-ants">
+              <use xlink:href="#s-text" class="text-copy"></use>
+              <use xlink:href="#s-text" class="text-copy"></use>
+              <use xlink:href="#s-text" class="text-copy"></use>
+              <use xlink:href="#s-text" class="text-copy"></use>
+              <use xlink:href="#s-text" class="text-copy"></use>
+          </g>
+        </svg>
+      </div>
+    </a>
+  <%}%>
+    
+    <div class="entry <% if (page.source=="index.md") {%> <%= "homeContent"%> <%} %>">
+      <% if (item.excerpt && index){ %>
+        <%- item.excerpt %>
+      <% } else { %>
+        
+        <% if (page.source=="index.md") {%><a href="/archives" class="tagline"> <%}%>
+          <%- item.content %>
+        <% if (page.source=="index.md") {%></a><%}%>
+
+      <% } %>
+    </div>
+    <% if (page.source!="index.md") {%>
+      <footer class="article-footer">
+        <div class="navPosts">
+          <%if(page.prev){%>
+            <div class="navPrevButton"><a href="/<%-page.prev.path%>">&#10096; &nbsp; &nbsp; Previous: <%- page.prev.title%></a></div>
+          <%}%>
+          <%if(page.next){%>
+            <div class="navNextButton"><a href="/<%-page.next.path%>">Next: <%- page.next.title%>&nbsp; &nbsp;  &#10097;</a>
+          <%}%>
+        </div>
+          <div class="article-meta pull-left">
+            <%- partial('post/category') %>
+            <%- partial('post/tag') %>
+          </div>
+          <% if (index && (theme.duoshuo || theme.disqus)){ %>
+          <div class="article-meta pull-right">
+            <span>
+              <i class="icon-comments"></i>
+              <span>
+                <a href="<%- item.permalink %>#comment"><%- __('comment') %></a>
+              </span>
+            </span>
+          </div>
+          <% } %>
+      </footer>
+    <%}%>
+  </div>
+</article>
+<% if (!index){ %>
+  <%- partial('comment') %>
+<% } %>
